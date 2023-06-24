@@ -31,6 +31,17 @@ const userSchema = new mongoose.Schema({
 })
 
 
+// save message
+userSchema.methods.Messagesave = async function(message){
+    try {
+        this.messages = this.messages.concat({message});
+        await this.save();
+        return message;
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 
 // create model
 const users = new mongoose.model("users",userSchema);

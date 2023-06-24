@@ -5,18 +5,18 @@ const nodemailer = require("nodemailer");
 
 // email config
 const transporter = nodemailer.createTransport({
-    service:"gmail",
-    auth:{
-        user:process.env.EMAIL,
-        pass:process.env.PASS
+    service: "gmail",
+    host: 'smtp.gmail.com',
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASS
     }
-})
+});
 
 
-// register user details
-router.post("/register", async(req,res)=>{
-    const {fname, lname, email, mobile, message} = req.body;
-    console.log(fname)
+//register user details
+router.post("/register", async (req, res) => {
+    const { fname, lname, email, mobile, message } = req.body;
 
     if (!fname || !lname || !email || !mobile) {
         res.status(401).json({ status: 401, error: "All Input require" })
@@ -72,6 +72,7 @@ router.post("/register", async(req,res)=>{
         res.status(401).json({ status: 401, error: "All Input require" });
         console.log("catch error")
     }
+
 })
 
 module.exports = router;
