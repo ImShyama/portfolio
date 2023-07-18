@@ -26,7 +26,7 @@ const Header = () => {
                 <div className="hamburgur">
                         <i class="fa fa-bars inner" onClick={handleShow} aria-hidden="true" style={{cursor:"pointer"}}></i>
                         <h2 className='mt-2 h2_right' style={{ color: "#6C63FF" }}>
-                            <NavLink to="/" style={{ textDecoration: "none" }}>Harsh Pathak</NavLink>
+                            <NavLink to="/" style={{ textDecoration: "none" }}>Shyama Pandit</NavLink>
                         </h2>
                     </div>
 
@@ -38,7 +38,7 @@ const Header = () => {
                             <NavLink to="/contact" className="text-decoration-none" style={common}>Contact</NavLink>
                         </div>
                         <div>
-                            <Button variant="danger">YouTube</Button>
+                            <Button variant="danger"><a href="https://www.youtube.com" target="_blank" className="text-decoration-none text-light">Youtube</a></Button>
                         </div>
 
                     </Nav>
@@ -55,7 +55,7 @@ const Header = () => {
                             <NavLink to="/playlist" className="text-decoration-none  mb-2" style={common}>Project</NavLink>
                             <NavLink to="/contact" className="text-decoration-none  mb-2" style={common}>Contact</NavLink>
                             <div>
-                                <Button variant="danger" style={{ letterSpacing: ".5px", marginLeft: -15 }}><a href="https://www.youtube.com/c/HarshPathakNV" target="_blank" className="text-decoration-none text-light">Youtube</a></Button>
+                                <Button variant="danger" style={{ letterSpacing: ".5px", marginLeft: -15 }}><a href="https://www.youtube.com" target="_blank" className="text-decoration-none text-light">Youtube</a></Button>
                             </div>
                         </div>
                     </Offcanvas.Body>

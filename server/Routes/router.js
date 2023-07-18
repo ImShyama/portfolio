@@ -2,6 +2,7 @@ const  express = require("express");
 const router = new express.Router();
 const users = require("../models/userSchema");
 const nodemailer = require("nodemailer");
+const { now } = require("mongoose");
 
 // email config
 const transporter = nodemailer.createTransport({
@@ -62,7 +63,7 @@ router.post("/register", async (req, res) => {
                     console.log("error" + error)
                 } else {
                     console.log("Email sent" + info.response);
-                    res.status(201).json({ status: 201, message: "Email sent SUccesfully" })
+                    res.status(201).json({ status: 201, message: "Email sent Succesfully" })
                 }
             });
             res.status(201).json({ status: 201, storeData })

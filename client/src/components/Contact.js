@@ -69,15 +69,15 @@ const Contact = () => {
   return (
     <>
       <div className="container mb-3 contact">
-        <h2 className='text-center'>ContactUS</h2>
+        <h2 className='text-center'>Contact Us</h2>
         <div className="container mt-2">
           <Form className='row mt-2'>
             <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-              <Form.Label>Fname</Form.Label>
+              <Form.Label>First Name</Form.Label>
               <Form.Control type="text" name='fname' value={inputvalue.fname} onChange={getvalue} />
             </Form.Group>
             <Form.Group className="mb-3 col-lg-6"  controlId="formBasicEmail">
-              <Form.Label>Lname</Form.Label>
+              <Form.Label>Last Name</Form.Label>
               <Form.Control type="text" name='lname' value={inputvalue.lname}  onChange={getvalue} />
             </Form.Group>
             <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
